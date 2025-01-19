@@ -1,48 +1,3 @@
---local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/renlua/Script-Tutorial/refs/heads/main/WareUI.lua"))()
--- 脚本的UI(WareUI)
-
---local window = library:new("脚本名字")
--- 你的脚本名字
-
---local Tab = window:Tab("标签")
--- 左边的标签
-
---local section = Tab:section("分区",true)
- -- true为默认打开，false为默认关闭
- 
--- section:Textbox("文本框", "", "请输入", function(Value)
---     print(Value)
- --    end)
-     -- 输入文本 Value为输入的内容
-     
- --    section:Button("按钮", function()
---         print("Button")
---         end)
-         -- 一个按钮点击执行里面的内容
-         
---         section:Toggle("开关", "", false, function(Value)
---             print(Value)
---             end)
-             -- 一个开关false为默认关闭，true默认打开，Value为返回值
-             
---             section:Dropdown("下拉条", '', {"0","1","2","3","4","5","6","7","8","9"}, function(s)
---                 print(s)
- --                end)
-                 -- 一个下拉条，'{"0","1","2","3","4","5","6","7","8","9"}'为下拉的内容
-                 -- Value为返回值为选择了什么
-                 
- --                section:Keybind("键位绑定", Enum.KeyCode.LeftControl, function()
---                     OpenMain()
---                     end)
-                     -- 一个快捷键，用于电脑，作用为打开或关闭UI
-                     
- --                    section:Slider("拉条", "", 1, 1, 100, false, function(Value)
---                         print(Value)
---                         end)
-                         -- 一个能拉动的拉条，Value为数值
-                         
---                         section:Label("标签")
-                         -- 一个标签类似于留言
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/10h-pack/UI/refs/heads/main/i6.lua"))()
  local window = library:new("6")  local Tab = window:Tab("6") 
 local section = Tab:section("前言必须查看!!!",true)
@@ -146,7 +101,8 @@ end)
 local section = Tab:section("玩家更改",false)         
 section:Slider("跳跃高度", "", 1, 1, 100, false, function(Value)
      print(Value)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value                                     end)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value  
+ end)
 section:Slider("移动速度", "", 1, 1, 100, false, function(Value)
      print(Value)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
